@@ -142,7 +142,7 @@ export default function HomePage() {
               { name: "ระบบประปา", icon: "🚰", color: "bg-blue-100" },
               { name: "เครื่องมือช่าง", icon: "🛠️", color: "bg-gray-100" },
               { name: "วัสดุตกแต่ง", icon: "🎨", color: "bg-purple-100" },
-              { name: "ความปลอดภัย", icon: "🦺", color: "bg-blue-100" },
+              { name: "ความปลอดภัย", icon: "🦺", color: "bg-orange-100" },
               { name: "สวน & ภายนอก", icon: "🌳", color: "bg-green-100" },
               { name: "สี & เคมีภัณฑ์", icon: "🎨", color: "bg-pink-100" },
               { name: "ดูทั้งหมด", icon: "🔍", color: "bg-gray-100" },
