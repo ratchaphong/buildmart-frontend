@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import { Eye, EyeOff, Mail, Lock, User, Phone } from "lucide-react";
+import { Eye, Mail, Lock, User, Phone } from "lucide-react";
 
 export default function RegisterPage() {
   return (

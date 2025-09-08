@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import { Eye, EyeOff, Mail, Lock } from "lucide-react";
+import { Eye, Mail, Lock } from "lucide-react";
 
 export default function LoginPage() {
   return (
