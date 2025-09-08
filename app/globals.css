@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/* Tailwind CSS directives */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors;
+  }
+
+  .btn-outline {
+    @apply border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow p-6;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-gray-900 mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-gray-600;
+  }
+
+  .icon-container {
+    @apply w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4;
+  }
+
+  .icon-primary {
+    @apply bg-blue-100 text-blue-600;
+  }
+
+  .text-primary {
+    @apply text-blue-600;
+  }
+
+  .bg-primary {
+    @apply bg-blue-600;
+  }
+
+  .bg-primary-light {
+    @apply bg-blue-50;
+  }
+
+  .bg-primary-dark {
+    @apply bg-blue-700;
+  }
+
+  .gradient-primary {
+    @apply bg-gradient-to-r from-blue-600 to-blue-700;
+  }
+}
