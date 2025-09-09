@@ -3,8 +3,36 @@
 /* Tailwind CSS directives */
 
 :root {
+  /* Base Colors */
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Primary Colors */
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-light: #dbeafe;
+  --primary-dark: #1e40af;
+
+  /* Secondary Colors */
+  --secondary: #6b7280;
+  --secondary-light: #f3f4f6;
+
+  /* Text Colors */
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --text-white: #ffffff;
+
+  /* Background Colors */
+  --bg-white: #ffffff;
+
+  /* Border Colors */
+  --border-gray: #d1d5db;
+  --border-red: #ef4444;
+
+  /* Input Colors */
+  --input-text: #000000;
+  --input-placeholder: #9ca3af;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,60 +49,119 @@ body {
     "Leelawadee", Arial, sans-serif;
 }
 
+@layer base {
+  /* Base component styles using Tailwind */
+  a {
+    color: var(--primary);
+    @apply no-underline transition-colors duration-200;
+  }
+
+  a:hover {
+    color: var(--primary-hover);
+    @apply underline;
+  }
+
+  select {
+    @apply w-full px-4 py-3 border rounded-lg text-base cursor-pointer transition-colors duration-200;
+    border-color: var(--border-gray);
+    background-color: var(--bg-white);
+    color: var(--input-text);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+  }
+
+  select:focus {
+    @apply outline-none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--primary-light);
+  }
+
+  select:hover {
+    border-color: var(--primary);
+  }
+
+  input {
+    @apply w-full px-4 py-3 border rounded-lg text-base transition-colors duration-200;
+    border-color: var(--border-gray);
+    background-color: var(--bg-white);
+    color: var(--input-text);
+  }
+
+  input:focus {
+    @apply outline-none ring-2;
+    border-color: var(--primary);
+    /* Use a custom ring color if supported by your Tailwind config */
+    box-shadow: 0 0 0 2px var(--primary-light, #bfdbfe);
+  }
+
+  input:hover {
+    border-color: var(--primary);
+  }
+
+  input::placeholder {
+    color: var(--text-placeholder);
+    @apply text-sm;
+  }
+
+  input:invalid {
+    border-color: var(--border-red);
+  }
+
+  input:invalid:focus {
+    box-shadow: 0 0 0 2px var(--error-bg, #fee2e2);
+  }
+
+  button {
+    @apply px-6 py-3 rounded-lg font-semibold cursor-pointer transition-all duration-200 inline-flex items-center justify-center;
+  }
+}
+
 @layer components {
-  .container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-
+  /* Button Primary */
   .btn-primary {
-    @apply bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors;
+    background-color: var(--primary);
+    color: var(--text-white);
+    @apply border-0;
   }
 
+  .btn-primary:hover {
+    background-color: var(--primary-hover);
+    @apply opacity-90;
+  }
+
+  .btn-primary:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  .btn-primary:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  /* Button Secondary */
   .btn-secondary {
-    @apply border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors;
+    @apply border-2 bg-transparent;
+    border-color: var(--primary);
+    color: var(--primary);
   }
 
-  .btn-outline {
-    @apply border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors;
+  .btn-secondary:hover {
+    color: var(--text-white);
+    background-color: var(--primary);
   }
 
-  .card {
-    @apply bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow p-6;
+  .btn-secondary:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
   }
 
-  .section-title {
-    @apply text-3xl font-bold text-gray-900 mb-4;
-  }
-
-  .section-subtitle {
-    @apply text-gray-600;
-  }
-
-  .icon-container {
-    @apply w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4;
-  }
-
-  .icon-primary {
-    @apply bg-blue-100 text-blue-600;
-  }
-
-  .text-primary {
-    @apply text-blue-600;
-  }
-
-  .bg-primary {
-    @apply bg-blue-600;
-  }
-
-  .bg-primary-light {
-    @apply bg-blue-50;
-  }
-
-  .bg-primary-dark {
-    @apply bg-blue-700;
-  }
-
-  .gradient-primary {
-    @apply bg-gradient-to-r from-blue-600 to-blue-700;
+  .btn-secondary:disabled {
+    @apply opacity-50 cursor-not-allowed;
   }
 }
