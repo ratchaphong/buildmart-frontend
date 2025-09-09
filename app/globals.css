@@ -146,9 +146,10 @@ body {
 
   /* Button Secondary */
   .btn-secondary {
-    @apply border-2 bg-transparent;
+    @apply border-2;
     border-color: var(--primary);
     color: var(--primary);
+    background-color: var(--bg-white);
   }
 
   .btn-secondary:hover {
