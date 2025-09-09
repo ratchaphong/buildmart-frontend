@@ -54,11 +54,10 @@
     gap: 0.5rem;
     color: var(--text-white);
     text-decoration: none;
-    transition: opacity 0.2s ease;
   }
 
   .top-link:hover {
-    opacity: 0.8;
+    color: var(--primary-light, #bfdbfe);
   }
 
   .top-link-icon {

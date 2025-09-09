@@ -36,11 +36,11 @@ export default function HomePage() {
             <div className="header-top-right">
               <a href="/stores" className="top-link">
                 <MapPin className="top-link-icon" />
-                <span>ค้นหาสาขา</span>
+                ค้นหาสาขา
               </a>
               <a href="/help" className="top-link">
                 <HelpCircle className="top-link-icon" />
-                <span>ช่วยเหลือ</span>
+                ช่วยเหลือ
               </a>
             </div>
           </div>
