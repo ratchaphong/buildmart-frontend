@@ -1,9 +1,9 @@
 "use client";
 
-import { useRegister } from "./useRegister";
+// import { useRegister } from "./useRegister";
 
 export default function RegisterPage() {
-  const { handleSubmit, isLoading } = useRegister();
+  // const { handleSubmit, isLoading } = useRegister();
 
   return (
     <div

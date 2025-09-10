@@ -1,9 +1,9 @@
 "use client";
 
-import { useForgotPassword } from "./useForgotPassword";
+// import { useForgotPassword } from "./useForgotPassword";
 
 export default function ForgotPasswordPage() {
-  const { handleSubmit, isLoading } = useForgotPassword();
+  // const { handleSubmit, isLoading } = useForgotPassword();
 
   return (
     <div
