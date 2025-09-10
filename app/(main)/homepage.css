@@ -155,7 +155,7 @@
     background-color: var(--primary-light);
   }
 
-  .action-icon {
+  .header-action-icon {
     width: 2rem;
     height: 2rem;
   }
@@ -233,4 +233,230 @@
     margin-bottom: 2rem;
     opacity: 0.9;
   }
+
+  /* Featured Products Section */
+  .featured-products-section {
+    padding: 4rem 0;
+    background-color: var(--bg-white);
+  }
+
+  .featured-products-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .product-card {
+    background-color: var(--bg-white);
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-gray);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .product-image-container {
+    position: relative;
+    height: 200px;
+    background-color: var(--bg-gray);
+    overflow: hidden;
+  }
+
+  .product-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-placeholder {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary);
+    color: var(--text-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .product-badges {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .badge-new {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    color: var(--text-white);
+    box-shadow: 0 2px 4px rgba(255, 107, 107, 0.3);
+    font-weight: 700;
+  }
+
+  .badge-discount {
+    background-color: var(--border-red);
+    color: var(--text-white);
+  }
+
+  .product-info {
+    padding: 1.5rem;
+  }
+
+  .product-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    line-height: 1.4;
+  }
+
+  .product-category {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .product-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .stars {
+    display: flex;
+    gap: 0.125rem;
+  }
+
+  .star {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .star-filled {
+    color: #fbbf24;
+    fill: currentColor;
+  }
+
+  .star-empty {
+    color: var(--border-gray);
+  }
+
+  .rating-count {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+
+  .product-price {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .original-price {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    text-decoration: line-through;
+  }
+
+  .current-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .add-to-cart-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .cart-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .section-footer {
+    text-align: center;
+  }
+
+  /* .btn-primary {
+    background-color: var(--primary);
+    color: var(--text-white);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--primary-dark);
+  } */
+
+  /* .btn-secondary {
+    background-color: transparent;
+    color: var(--text-white);
+    border: 2px solid var(--text-white);
+    border-radius: 0.5rem;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  } */
+
+  /* .btn-secondary:hover {
+    background-color: var(--text-white);
+    color: var(--primary);
+  } */
 }
