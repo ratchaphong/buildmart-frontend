@@ -68,7 +68,53 @@ export function useHomePage() {
     },
   ];
 
+  const whyChooseUs = [
+    {
+      iconType: "shield",
+      title: "คุณภาพดีเยี่ยม",
+      description:
+        "สินค้าคุณภาพสูง ผ่านการตรวจสอบมาตรฐาน รับประกันความแข็งแรงและทนทาน",
+    },
+    {
+      iconType: "truck",
+      title: "จัดส่งรวดเร็ว",
+      description:
+        "บริการจัดส่งทั่วประเทศ รับสินค้าได้ภายใน 1-3 วันทำการ พร้อมติดตามสถานะ",
+    },
+    {
+      iconType: "award",
+      title: "ราคาแข่งขัน",
+      description:
+        "ราคาดีที่สุดในตลาด พร้อมโปรโมชั่นและส่วนลดพิเศษสำหรับลูกค้าทุกท่าน",
+    },
+    {
+      iconType: "clock",
+      title: "บริการ 24/7",
+      description:
+        "ทีมงานพร้อมให้คำปรึกษาและบริการลูกค้าตลอด 24 ชั่วโมง ทุกวัน",
+    },
+  ];
+
+  const footerData = {
+    quickLinks: [
+      { name: "หน้าแรก", url: "/" },
+      { name: "เกี่ยวกับเรา", url: "/about" },
+      { name: "โปรโมชั่น", url: "/promotions" },
+      { name: "บริการ", url: "/services" },
+      { name: "ติดต่อเรา", url: "/contact" },
+    ],
+    categories: [
+      { name: "วัสดุก่อสร้าง", url: "/categories/construction" },
+      { name: "เครื่องมือ", url: "/categories/tools" },
+      { name: "อุปกรณ์ไฟฟ้า", url: "/categories/electrical" },
+      { name: "วัสดุตกแต่ง", url: "/categories/decorative" },
+      { name: "อุปกรณ์สุขภัณฑ์", url: "/categories/plumbing" },
+    ],
+  };
+
   return {
     featuredProducts,
+    whyChooseUs,
+    footerData,
   };
 }
