@@ -1,0 +1,32 @@
+@layer components {
+  /* FormButton Styles - Extended from globals.css button styles */
+  .form-button {
+    /* Inherits base button styles from globals.css */
+  }
+
+  /* Loading State */
+  .form-button-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .form-button-spinner {
+    animation: spin 1s linear infinite;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--text-white);
+    border-radius: 50%;
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
