@@ -1,0 +1,19 @@
+services:
+  # Next.js Frontend Development Server
+  frontend:
+    image: node:20-alpine
+    working_dir: /app
+    ports:
+      # Host port:Container port
+      # ถ้าต้องการเปลี่ยน port ให้แก้ไขที่นี่ (เช่น "8080:4000")
+      - "4000:4000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    env_file:
+      - .env.local
+    # yarn dev จะอ่าน PORT จาก .env.local (ใน container)
+    # แต่ port mapping ด้านบนจะกำหนด host port ที่เข้าถึงได้
+    command: sh -c "yarn install && yarn dev"
+    stdin_open: true
+    tty: true

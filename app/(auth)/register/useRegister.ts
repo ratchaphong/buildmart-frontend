@@ -1,7 +1,10 @@
 import { useFormValidation } from "@/lib/forms";
 import { registerSchema, RegisterFormData } from "./validationSchema";
+import { useAuthStore } from "@/lib/stores";
 
 export function useRegister() {
+  const { register, isLoading, clearError } = useAuthStore();
+
   const form = useFormValidation<RegisterFormData>({
     initialValues: {
       firstName: "",
@@ -15,17 +18,23 @@ export function useRegister() {
     validationSchema: registerSchema,
     onSubmit: async (values, { setSubmitting }) => {
       try {
-        // TODO: Implement actual register API call
-        console.log("Registering with:", values);
+        clearError(); // Clear any previous errors
 
-        // Simulate API call
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        await register({
+          firstName: values.firstName,
+          lastName: values.lastName,
+          email: values.email,
+          phone: values.phone,
+          password: values.password,
+          confirmPassword: values.confirmPassword,
+          agreeTerms: values.agreeTerms,
+        });
 
-        // TODO: Handle successful registration
+        // Registration successful - user will be redirected automatically
         console.log("Registration successful");
       } catch (error) {
         console.error("Registration failed:", error);
-        // TODO: Handle registration error
+        // Error is handled by the store
       } finally {
         setSubmitting(false);
       }
@@ -34,6 +43,6 @@ export function useRegister() {
 
   return {
     form,
-    isLoading: form.isSubmitting,
+    isLoading: isLoading || form.isSubmitting,
   };
 }
