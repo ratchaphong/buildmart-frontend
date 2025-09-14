@@ -1,0 +1,72 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1a1a1a"/>
+  
+  <!-- Gradient overlay -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background pattern -->
+  <rect width="1200" height="630" fill="url(#gradient)"/>
+  
+  <!-- Construction elements -->
+  <g opacity="0.1">
+    <!-- Building silhouette -->
+    <rect x="50" y="200" width="80" height="300" fill="white"/>
+    <rect x="150" y="150" width="80" height="350" fill="white"/>
+    <rect x="250" y="180" width="80" height="320" fill="white"/>
+    <rect x="350" y="120" width="80" height="380" fill="white"/>
+    
+    <!-- Construction crane -->
+    <line x1="500" y1="100" x2="500" y2="500" stroke="white" stroke-width="4"/>
+    <line x1="500" y1="100" x2="700" y2="200" stroke="white" stroke-width="3"/>
+    <line x1="700" y1="200" x2="800" y2="300" stroke="white" stroke-width="2"/>
+  </g>
+  
+  <!-- Main content area -->
+  <rect x="100" y="100" width="1000" height="430" fill="rgba(255,255,255,0.95)" rx="20"/>
+  
+  <!-- Logo area -->
+  <rect x="150" y="150" width="80" height="80" fill="#2563eb" rx="15"/>
+  <text x="190" y="200" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="40" font-weight="bold">B</text>
+  
+  <!-- Company name -->
+  <text x="280" y="200" fill="#1a1a1a" font-family="Arial, sans-serif" font-size="48" font-weight="bold">BuildMart</text>
+  
+  <!-- Tagline -->
+  <text x="280" y="250" fill="#4b5563" font-family="Arial, sans-serif" font-size="24">วัสดุก่อสร้างคุณภาพสูง</text>
+  
+  <!-- Description -->
+  <text x="150" y="320" fill="#6b7280" font-family="Arial, sans-serif" font-size="20" font-weight="300">
+    แพลตฟอร์มขายวัสดุก่อสร้าง เครื่องมือ และอุปกรณ์คุณภาพสูง
+  </text>
+  <text x="150" y="350" fill="#6b7280" font-family="Arial, sans-serif" font-size="20" font-weight="300">
+    พร้อมบริการจัดส่งและติดตั้งครบวงจร
+  </text>
+  
+  <!-- Features -->
+  <g transform="translate(150, 400)">
+    <circle cx="10" cy="10" r="5" fill="#10b981"/>
+    <text x="25" y="15" fill="#374151" font-family="Arial, sans-serif" font-size="16">วัสดุก่อสร้างครบครัน</text>
+    
+    <circle cx="10" cy="40" r="5" fill="#10b981"/>
+    <text x="25" y="45" fill="#374151" font-family="Arial, sans-serif" font-size="16">บริการจัดส่งทั่วประเทศ</text>
+    
+    <circle cx="10" cy="70" r="5" fill="#10b981"/>
+    <text x="25" y="75" fill="#374151" font-family="Arial, sans-serif" font-size="16">ราคาดี คุณภาพเยี่ยม</text>
+  </g>
+  
+  <!-- Website URL -->
+  <text x="150" y="520" fill="#2563eb" font-family="Arial, sans-serif" font-size="18" font-weight="500">buildmart.com</text>
+  
+  <!-- Decorative elements -->
+  <g opacity="0.3">
+    <circle cx="1000" cy="150" r="30" fill="#2563eb"/>
+    <circle cx="1050" cy="200" r="20" fill="#10b981"/>
+    <circle cx="950" cy="250" r="25" fill="#f59e0b"/>
+  </g>
+</svg>
